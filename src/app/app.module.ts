@@ -8,6 +8,7 @@ import { UserService } from '../pages/home/user.service';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule }    from '@angular/http';
 import { SwingModule } from 'angular2-swing';
+import { UserModal} from '../pages/user/user';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SwingModule } from 'angular2-swing';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    UserModal
   ],
   imports: [
     IonicModule.forRoot(MyApp,{ tabsPlacement: 'top' }),
@@ -29,6 +31,7 @@ import { SwingModule } from 'angular2-swing';
     AboutPage,
     ContactPage,
     HomePage,
+    UserModal,
     TabsPage
   ],
   providers: [ UserService ,{provide: ErrorHandler, useClass: IonicErrorHandler}]
