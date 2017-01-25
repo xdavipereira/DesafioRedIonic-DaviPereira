@@ -1,4 +1,4 @@
-<ion-content class="home" padding>
+<ion-content class="home">
   <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
     <ion-card #mycards1 swing-card *ngFor="let c of cards">
 
@@ -43,4 +43,19 @@
     </ion-col>
 
   </ion-row>
+
+  <!-- <ion-row>
+      <ion-slides>
+        <ion-slide *ngFor="let b of cards">
+          <ion-list>
+            <ion-item>
+              <ion-avatar item-left>
+                <img [src]="b.picture.large">
+              </ion-avatar>
+              <h2>{{b.name.first}}</h2>
+            </ion-item>
+          </ion-list>
+        </ion-slide>
+      </ion-slides>
+  </ion-row> -->
 </ion-content>

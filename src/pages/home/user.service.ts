@@ -5,19 +5,14 @@ import { LoadingController } from 'ionic-angular'
 @Injectable()
 export class UserService {
 
-  currentUser: any;
+  public currentUser: any;
 
   constructor(private http: Http, public loadCtrl: LoadingController){}
 
   getUsers(){
-    this.loadCtrl.create({ duration: 3000}).present();
+    this.loadCtrl.create({ duration: 1000}).present();
     return this.http.get('https://randomuser.me/api/?results=' + 10)
        .map(data => data.json().results);
-      // .subscribe(result => {
-      //   for (let val of result) {
-      //     this.cards.push(val);
-      //   }
-      // })
   }
 
   setCurrentUser(user){
@@ -26,6 +21,13 @@ export class UserService {
 
   getCurrentUser() {
     return this.currentUser;
+  }
+
+  getCurrentUserAge(){
+    let birthdate = new Date(this.currentUser.dob);
+    let currentDate = new Date();
+    console.log(`${currentDate.getFullYear()} - ${birthdate.getFullYear()} = ${currentDate.getFullYear() - birthdate.getFullYear()}`);
+    return currentDate.getFullYear() - birthdate.getFullYear();
   }
 
 }

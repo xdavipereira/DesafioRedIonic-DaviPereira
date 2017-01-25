@@ -8,7 +8,7 @@ import { UserService } from '../pages/home/user.service';
 import { TabsPage } from '../pages/tabs/tabs';
 import { HttpModule }    from '@angular/http';
 import { SwingModule } from 'angular2-swing';
-import { UserModal} from '../pages/user/user';
+import { UserModal} from '../pages/user/usermodal';
 
 
 @NgModule({
