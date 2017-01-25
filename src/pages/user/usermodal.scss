@@ -5,25 +5,11 @@ user-modal {
       width: 100%;
     }
 
-    .match_buttos button {
-
-      background: color($colors, more-light);
-    }
-
-    .match_buttos ion-col {
-      padding: 0px;
-    }
-
-    .match_buttos ion-icon {
-      font-size: 2.5em;
-    }
-
-
     .user-description {
       text-align: center;
     }
 
-    .ptinder-buttons {
+    .user-buttons {
       position: fixed;
       bottom:   0;
       z-index: 100;
@@ -32,13 +18,12 @@ user-modal {
       justify-content: space-around;
     }
 
-    .ptinder-button {
+    .user-buttons {
       width: 60px;
       height:60px;
       border-radius: 50%;
       background: #FFF;
     }
-
 
 
 }
