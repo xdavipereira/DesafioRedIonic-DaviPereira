@@ -1,0 +1,29 @@
+<ion-content>
+  <ion-item-divider class="color-red bg-white uppercase">
+    Combinações
+  </ion-item-divider>
+  <div padding>
+      <ks-swiper-container [options]="example1SwipeOptions">
+        <ks-swiper-slide *ngFor="let s of [1,2,3,4,5,6,7,8,9]">
+          <img class="img-match"src="http://api.randomuser.me/portraits/thumb/men/{{s}}.jpg">
+        </ks-swiper-slide>
+      </ks-swiper-container>
+    </div>
+
+    <ion-item-divider class="color-red bg-white uppercase">
+      Mensagens
+    </ion-item-divider>
+
+  <ion-list>
+    <ion-item *ngFor="let user of users">
+      <ion-avatar item-left>
+        <img *ngIf="user.picture" [src]="user.picture.thumbnail">
+      </ion-avatar>
+      <h2>{{user.name.first}}</h2>
+      <p>I've had a pretty messed up day. If we just...</p>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>
