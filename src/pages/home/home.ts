@@ -24,6 +24,7 @@ export class HomePage {
 
   cards: Array<any> = [];
   stackConfig: StackConfig;
+  public like;
 
   constructor(public navCtrl: NavController, private http: Http, public modalCtrl: ModalController, private userService: UserService) {
     this.stackConfig = {
@@ -58,7 +59,7 @@ export class HomePage {
 
     voteUp(like: boolean) {
       let removedCard = this.cards.pop();
-
+      this.cleanCard();
       //Carregar mais cards quando houver apenas duas cards faltando.
         if (this.cards.length < 2){
           this.addNewUsers();
@@ -67,11 +68,20 @@ export class HomePage {
 
 
   ngAfterViewInit() {
+    this.swingStack.throwin.subscribe((event: DragEvent) => {
+   	    this.cleanCard();
+   	  });
+
     this.addNewUsers();
   }
 
   onItemMove(element, x, y, r) {
+    x < 0 ?  this.like = true : this.like = false;
     element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
+  }
+
+  cleanCard() {
+    this.like = undefined;
   }
 
 

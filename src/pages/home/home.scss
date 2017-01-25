@@ -14,17 +14,44 @@ page-home {
       width: 100%;
     }
 
-    .match_buttos button {
+    .match-buttons button {
 
       background: color($colors, more-light);
     }
 
-    .match_buttos ion-col {
+    .match-buttonsion-col {
       padding: 0px;
     }
 
-    .match_buttos ion-icon {
+    .match-buttons ion-icon {
       font-size: 2.5em;
+    }
+
+
+    .like {
+      position: absolute;
+      top: 35px;
+      left: 20px;
+      font-size: 30px;
+      color: #4CAF50;
+      border: 2px solid #4CAF50;
+      border-radius: 5px;
+      transform: rotate(-45deg);
+      padding:10px;
+      opacity: 100;
+    }
+
+    .deslike {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      font-size: 30px;
+      color: #F44336;
+      border: 2px solid #F44336;
+      border-radius: 5px;
+      transform: rotate(45deg);
+      padding:10px;
+      opacity: 100;
     }
 
 
