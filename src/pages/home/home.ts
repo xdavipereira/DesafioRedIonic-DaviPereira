@@ -42,9 +42,15 @@ export class HomePage {
 
 
 
-    openModal(user){
-      let modal = this.modalCtrl.create(MatchPage,user);
-      this.userService.setCurrentUser(user);
+    openModal(userCard){
+      let modal = this.modalCtrl.create(UserModal,userCard);
+      this.userService.setCurrentUser(userCard);
+      modal.present();
+    }
+
+    openMatchModal(){
+      let modal = this.modalCtrl.create(MatchPage);
+      this.userService.setCurrentUser(this.cards[this.cards.length - 1] );
       modal.present();
     }
 
