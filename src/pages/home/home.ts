@@ -3,8 +3,8 @@ import { NavController, ModalController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import { UserModal } from '../user/usermodal';
-import { UserService} from './user.service'
-
+import { UserService} from './user.service';
+import { MatchPage } from '../match/match.component';
 import {
   StackConfig,
   Stack,
@@ -26,7 +26,7 @@ export class HomePage {
   stackConfig: StackConfig;
   public like;
 
-  constructor(public navCtrl: NavController, private http: Http, public modalCtrl: ModalController, private userService: UserService) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, private userService: UserService) {
     this.stackConfig = {
       throwOutConfidence: (offset, element) => {
         return Math.min(Math.abs(offset) / (element.offsetWidth / 2), 1);
@@ -43,7 +43,7 @@ export class HomePage {
 
 
     openModal(user){
-      let modal = this.modalCtrl.create(UserModal,user);
+      let modal = this.modalCtrl.create(MatchPage,user);
       this.userService.setCurrentUser(user);
       modal.present();
     }

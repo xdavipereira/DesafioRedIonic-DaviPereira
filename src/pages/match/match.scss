@@ -1,0 +1,47 @@
+$gradient-buttom: linear-gradient(to right, rgba(250,102,109,1) 0%, rgba(250,102,109,1) 53%, rgba(255,154,76,1) 100%);
+
+.images-border {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#matches {
+  padding: 20px;
+  background: rgba(0,0,0,0.75);
+  height: 100%;
+}
+
+#matches {
+  h1,
+  p {
+    text-align: center;
+    color: white;
+  }
+}
+
+#matches {
+  .match-buttons {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+#matches {
+  .match-buttons {
+    button {
+      background: $gradient-buttom;
+      margin-bottom: 20px;
+      height: 50px;
+      border-radius: 40px;
+      color: white;
+      font-weight: bold;
+
+      &:hover {
+        background: #4d2424;
+        border: 3px solid white;
+      }
+    }
+  }
+}

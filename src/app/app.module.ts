@@ -10,6 +10,7 @@ import { HttpModule }    from '@angular/http';
 import { SwingModule } from 'angular2-swing';
 import {KSSwiperModule} from 'angular2-swiper';
 import { UserModal} from '../pages/user/usermodal';
+import { MatchPage } from '../pages/match/match.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { UserModal} from '../pages/user/usermodal';
     MessagePage,
     HomePage,
     TabsPage,
-    UserModal
+    UserModal,
+    MatchPage
   ],
   imports: [
     IonicModule.forRoot(MyApp,{ tabsPlacement: 'top' }),
@@ -34,7 +36,8 @@ import { UserModal} from '../pages/user/usermodal';
     MessagePage,
     HomePage,
     UserModal,
-    TabsPage
+    TabsPage,
+    MatchPage
   ],
   providers: [ UserService ,{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
