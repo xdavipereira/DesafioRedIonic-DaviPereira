@@ -1,8 +1,9 @@
-# DesafioRedIonic- Davi Pereira
+# DesafioRedIonic - Davi Pereira
 
 Desafio para a seleção de estagiario, da empresa RedRocket.
 
-Objetivo: Realizar a copia do aplicativo Tinder usando Ionic 2.
+### Objetivo:
+Realizar a copia do aplicativo Tinder usando Ionic 2.
 
 
 ##Instalação
@@ -14,6 +15,7 @@ cd DesafioRedIonic-DaviPerereira
 
 npm install
 ```
+
 ##Iniciar aplicação.
 
 ```
