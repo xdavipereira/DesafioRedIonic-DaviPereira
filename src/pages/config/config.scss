@@ -1,0 +1,20 @@
+page-config {
+
+  .config {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    button {
+      width: 90%;
+    }
+  }
+
+
+    .label-card {
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: #ee3a3a;
+    }
+}

@@ -1,0 +1,52 @@
+<ion-content padding>
+  <ion-header>
+  <ion-navbar>
+    <ion-title>
+      Configurações
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<div class="config">
+  <button class="button-config" ion-button >Assine o Tinder Plus</button>
+  <button class="button-config" ion-button >Descolar mais Boosts</button>
+  <button class="button-config" ion-button >Precisa de mais Super Likes</button>
+
+</div>
+
+
+  <ion-card class="card-config">
+    <ion-card-header class="label-card">
+      Mostrar-me
+    </ion-card-header>
+    <ion-item>
+      <ion-label> Homens</ion-label>
+      <ion-toggle  checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label> Mulheres</ion-label>
+      <ion-toggle  checked="true"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+  <ion-card class="card-config">
+  <ion-card-header class="label-card">
+    Área de busca
+  </ion-card-header>
+  <ion-item>
+    <ion-range min="1" max="200" pin="true" [(ngModel)]="distance" color="primary">
+    </ion-range>
+  </ion-item>
+  </ion-card>
+
+  <ion-card class="card-config">
+    <ion-card-header class="label-card">
+      Buscar por Idade
+    </ion-card-header>
+  <ion-item>
+    <ion-range min="1" max="99" dualKnobs="true" pin="true" [(ngModel)]="age" color="primary">
+    </ion-range>
+  </ion-item>
+  </ion-card>
+
+</ion-content>

@@ -2,7 +2,7 @@
   <div class="profile-container">
     <img  [src]="user.picture.thumbnail" class="profile-image">
     <ion-fab class="profile-edit" >
-      <button ion-fab><ion-icon name="create"></ion-icon></button>
+      <button  ion-fab><ion-icon name="create"></ion-icon></button>
     </ion-fab>
   </div>
 
@@ -10,6 +10,10 @@
     <h3>{{user.name}}, {{user.age}}</h3>
 
     <p class="color-gray">{{user.description}}</p>
+  </div>
+
+  <div text-center padding>
+    <button  [navPush]="configPage" ion-button round icon-left><ion-icon name="settings"></ion-icon>Configurações</button>
   </div>
 
 </ion-content>
