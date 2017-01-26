@@ -1,10 +1,18 @@
 $gradient-buttom: linear-gradient(to right, rgba(250,102,109,1) 0%, rgba(250,102,109,1) 53%, rgba(255,154,76,1) 100%);
 
+.images-match {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
 .images-border {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 2px solid white;
 }
 
+}
 #matches {
   padding: 20px;
   background: rgba(0,0,0,0.75);

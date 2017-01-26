@@ -3,9 +3,9 @@
         <div id="matches">
           <h1>Vocês combinam!</h1>
           <p>Você e {{currentUser.name.first }} gostaram um do outro.</p>
-          <div text-center>
-            <img class="images-border" [src]="currentUser.picture.large" style="margin-right:10px;" height="130" width="130"alt="">
-            <img class="images-border" [src]="user.picture.thumbnail" height="130" width="130"  alt="">
+          <div class="images-match">
+            <img class="images-border" [src]="currentUser.picture.large">
+            <img class="images-border" [src]="user.picture.thumbnail">
           </div>
           <div class="match-buttons" >
               <button>Enviar Mensagem</button>
