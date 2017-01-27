@@ -1,6 +1,5 @@
 import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
-import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import { UserModal } from '../user/usermodal';
 import { UserService} from '../../services/user.service';

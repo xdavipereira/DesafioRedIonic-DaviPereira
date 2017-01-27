@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-import { User } from '../user/moc-user';
 
 import { ConfigPage } from '../config/config.component';
 

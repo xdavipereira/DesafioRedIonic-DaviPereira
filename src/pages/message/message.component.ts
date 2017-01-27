@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
+import {KSSwiperContainer} from 'angular2-swiper';
 import { UserService } from '../../services/user.service';
 
 @Component({

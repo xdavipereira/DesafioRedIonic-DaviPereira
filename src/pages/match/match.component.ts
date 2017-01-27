@@ -1,7 +1,6 @@
 import { Component} from '@angular/core';
 import {  NavController, NavParams, ViewController } from 'ionic-angular';
 import { UserService } from '../../services/user.service';
-import { User } from '../user/moc-user';
 import { MessagePage} from '../message/message.component';
 
 @Component({
