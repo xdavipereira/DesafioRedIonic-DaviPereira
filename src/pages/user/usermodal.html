@@ -2,13 +2,13 @@
     <ion-list>
       <ion-item>
         <ion-card>
-          <img [src]="currentUser.picture.large">
+          <img [src]="currentCardUser.picture.large">
         </ion-card>
       </ion-item>
       <ion-item>
         <ion-icon name="more" item-right></ion-icon>
-        <h2>{{ currentUser.name.first }} {{ currentUser.name.last}}, {{ currentUser.age }} </h2>
-        <p>{{ currentUser.location.city }}, {{currentUser.location.state}}</p>
+        <h2>{{ currentCardUser.name.first }} {{ currentCardUser.name.last}}, {{ currentCardUser.age }} </h2>
+        <p>{{ currentCardUser.location.city }}, {{currentCardUser.location.state}}</p>
       </ion-item>
     </ion-list>
       <hr>

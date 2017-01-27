@@ -1,11 +1,13 @@
 import { Injectable }    from '@angular/core';
 import { Http } from '@angular/http';
+import 'rxjs/Rx';
 import { LoadingController } from 'ionic-angular'
 
 @Injectable()
 export class UserService {
 
-  public currentUser: any;
+  public currentCardUser: any;
+  public facebookUser: any;
 
   constructor(private http: Http, public loadCtrl: LoadingController){}
 
@@ -15,16 +17,24 @@ export class UserService {
        .map(data => data.json().results);
   }
 
-  setCurrentUser(user){
-    this.currentUser = user;
+  setCurrentCardUser(user){
+    this.currentCardUser = user;
   }
 
-  getCurrentUser() {
-    return this.currentUser;
+  getCurrentCardUser() {
+    return this.currentCardUser;
   }
 
-  getCurrentUserAge(){
-    let birthdate = new Date(this.currentUser.dob);
+  setFacebookUser(user){
+    this.facebookUser = user;
+  }
+
+  getFacebookUser() {
+    return this.facebookUser;
+  }
+
+  getCurrentCardUserAge(){
+    let birthdate = new Date(this.currentCardUser.dob);
     let currentDate = new Date();
     console.log(`${currentDate.getFullYear()} - ${birthdate.getFullYear()} = ${currentDate.getFullYear() - birthdate.getFullYear()}`);
     return currentDate.getFullYear() - birthdate.getFullYear();

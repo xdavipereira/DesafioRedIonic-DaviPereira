@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {KSSwiperContainer, KSSwiperSlide} from 'angular2-swiper';
-import { UserService } from '../home/user.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'page-message',

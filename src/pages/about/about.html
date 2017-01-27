@@ -1,15 +1,15 @@
 <ion-content>
   <div class="profile-container">
-    <img  [src]="user.picture.thumbnail" class="profile-image">
+    <img  [src]="user.photoURL" class="profile-image">
     <ion-fab class="profile-edit" >
       <button  ion-fab><ion-icon name="create"></ion-icon></button>
     </ion-fab>
   </div>
 
   <div text-center padding class="info-profile">
-    <h3>{{user.name}}, {{user.age}}</h3>
+    <h3>{{user.displayName}}</h3>
 
-    <p class="color-gray">{{user.description}}</p>
+    <p class="color-gray">Lore ipsum</p>
   </div>
 
   <div text-center padding>

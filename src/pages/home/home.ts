@@ -3,7 +3,7 @@ import { NavController, ModalController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/Rx';
 import { UserModal } from '../user/usermodal';
-import { UserService} from './user.service';
+import { UserService} from '../../services/user.service';
 import { MatchPage } from '../match/match.component';
 import {
   StackConfig,
@@ -44,13 +44,13 @@ export class HomePage {
 
     openModal(userCard){
       let modal = this.modalCtrl.create(UserModal,userCard);
-      this.userService.setCurrentUser(userCard);
+      this.userService.setCurrentCardUser(userCard);
       modal.present();
     }
 
     openMatchModal(){
       let modal = this.modalCtrl.create(MatchPage);
-      this.userService.setCurrentUser(this.cards[this.cards.length - 1] );
+      this.userService.setCurrentCardUser(this.cards[this.cards.length - 1] );
       modal.present();
     }
 

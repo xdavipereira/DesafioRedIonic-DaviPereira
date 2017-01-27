@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavParams, ViewController } from 'ionic-angular';
-import { UserService } from '../home/user.service';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'user-modal',
@@ -9,11 +9,11 @@ import { UserService } from '../home/user.service';
 
 export class UserModal {
 
-  public currentUser: any;
+  public currentCardUser: any;
 
  constructor(public params: NavParams, public viewCtrl: ViewController, private userService: UserService) {
-     this.currentUser = this.userService.getCurrentUser();
-     this.currentUser.age = this.userService.getCurrentUserAge();
+     this.currentCardUser = this.userService.getCurrentCardUser();
+     this.currentCardUser.age = this.userService.getCurrentCardUserAge();
    }
 
  dismiss() {

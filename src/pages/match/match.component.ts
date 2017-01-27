@@ -1,7 +1,8 @@
 import { Component} from '@angular/core';
-import { NavParams, ViewController } from 'ionic-angular';
-import { UserService } from '../home/user.service';
+import {  NavController, NavParams, ViewController } from 'ionic-angular';
+import { UserService } from '../../services/user.service';
 import { User } from '../user/moc-user';
+import { MessagePage} from '../message/message.component';
 
 @Component({
   selector: 'match-modal',
@@ -9,11 +10,17 @@ import { User } from '../user/moc-user';
 })
 export class MatchPage {
 
-  public currentUser;
-  public user = User;
+  currentUser: any;
+  user: any;
+  messagePage: MessagePage;
 
-  constructor(public params: NavParams, public viewCtrl: ViewController, private userService: UserService) {
-    this.currentUser = this.userService.getCurrentUser();
+  constructor(public navCtrl: NavController, public params: NavParams, public viewCtrl: ViewController, private userService: UserService) {
+    this.currentUser = this.userService.getCurrentCardUser();
+    this.user = this.userService.getFacebookUser();
+  }
+
+  goToMessagePage(){
+    this.navCtrl.push(MessagePage);
   }
 
   dismiss() {

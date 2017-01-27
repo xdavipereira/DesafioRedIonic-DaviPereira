@@ -6,17 +6,19 @@ import { User } from '../user/moc-user';
 
 import { ConfigPage } from '../config/config.component';
 
+import { UserService } from '../../services/user.service';
+
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
 
-  public user = User;
+  user: any;
   configPage: any = ConfigPage;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public userService: UserService) {
+    this.user = this.userService.getFacebookUser();
   }
 
 }
