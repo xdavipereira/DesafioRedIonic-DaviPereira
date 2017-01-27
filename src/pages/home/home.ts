@@ -7,10 +7,6 @@ import { UserService} from '../../services/user.service';
 import { MatchPage } from '../match/match.component';
 import {
   StackConfig,
-  Stack,
-  Card,
-  ThrowEvent,
-  DragEvent,
   SwingStackComponent,
   SwingCardComponent} from 'angular2-swing';
 
@@ -27,6 +23,7 @@ export class HomePage {
   public like;
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, private userService: UserService) {
+    //Configuração do component de cards.
     this.stackConfig = {
       throwOutConfidence: (offset, element) => {
         return Math.min(Math.abs(offset) / (element.offsetWidth / 2), 1);
@@ -57,22 +54,15 @@ export class HomePage {
 
     addNewUsers() {
         this.userService.getUsers()
-                        .subscribe( users => {
-                          console.log(users);
-                          this.cards = users;
-
-                          //for(let user of users){
-                            //this.cards.push(user);
-                          });
+                        .subscribe( users => {   this.cards = users;  });
     }
 
     voteUp(like: boolean) {
       let removedCard = this.cards.pop();
       this.cleanCard();
-      //Carregar mais cards quando houver apenas duas cards faltando.
-        if (this.cards.length < 2){
-          this.addNewUsers();
-        }
+      if (this.cards.length < 2){
+        this.addNewUsers();
+      }
     }
 
 

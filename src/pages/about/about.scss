@@ -7,24 +7,26 @@ page-about {
   .profile-container {
     min-height: 100px;
     margin-top: 30px;
-  }
 
-  .profile-container .profile-image {
-    border-radius: 50%;
-    width: 200px;
-    position:absolute;
-    left: 0;
-    right: 0;
-    margin:0 auto;
-    z-index: 1;
-  }
-
-  .profile-container .profile-edit {
+    .profile-image {
+      border-radius: 50%;
+      width: 200px;
       position:absolute;
-      left: 220px;
+      left: 0;
       right: 0;
-      top: 160px;
       margin:0 auto;
-      z-index: 3;
+      z-index: 1;
+    }
+
+    .profile-edit {
+        position:absolute;
+        left: 220px;
+        right: 0;
+        top: 160px;
+        margin:0 auto;
+        z-index: 3;
+    }
+
   }
+ 
 }

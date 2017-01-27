@@ -5,26 +5,29 @@ page-home {
       height: 85%;
       z-index: 10;
       position: relative;
+
+      ion-card {
+        border-radius: 5px;
+        margin: auto;
+        position: absolute;
+        width: 100%;
+      }
+
     }
 
-    #card-stack ion-card {
-      border-radius: 5px;
-      margin: auto;
-      position: absolute;
-      width: 100%;
-    }
 
-    .match-buttons button {
 
-      background: color($colors, more-light);
-    }
-
-    .match-buttonsion-col {
-      padding: 0px;
-    }
-
-    .match-buttons ion-icon {
-      font-size: 2.5em;
+    .match-buttons {
+      button {
+        background: color($colors,more-light);
+        box-shadow: 1px 1px 1px 1px #c6c6c6;
+      },
+      ion-col {
+        padding: 0px;
+      },
+      ion-con {
+        font-size:  2.5em;
+      }
     }
 
 

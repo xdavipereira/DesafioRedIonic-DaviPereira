@@ -5,10 +5,6 @@ user-modal {
       width: 100%;
     }
 
-    .user-description {
-      text-align: center;
-    }
-
     .user-buttons {
       position: fixed;
       bottom:   0;
@@ -22,7 +18,8 @@ user-modal {
       width: 60px;
       height:60px;
       border-radius: 50%;
-      background: #FFF;
+      background: color($colors,more-light);
+      box-shadow: 1px 1px 1px 1px #c6c6c6;
     }
 
 

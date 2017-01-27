@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AngularFire, AuthProviders,AuthMethods } from 'angularfire2';
+import { AngularFire } from 'angularfire2';
 import { NavController} from 'ionic-angular';
 import { TabsPage } from '../tabs/tabs';
 import { UserService } from '../../services/user.service';
