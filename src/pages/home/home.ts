@@ -58,9 +58,12 @@ export class HomePage {
     addNewUsers() {
         this.userService.getUsers()
                         .subscribe( users => {
-                          for(let user of users){
-                            this.cards.push(user);
-                          }});
+                          console.log(users);
+                          this.cards = users;
+
+                          //for(let user of users){
+                            //this.cards.push(user);
+                          });
     }
 
     voteUp(like: boolean) {

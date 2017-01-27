@@ -29,10 +29,7 @@ export class MessagePage {
 
   addNewUsers() {
       this.userService.getUsers()
-                      .subscribe( users => {
-                        for(let user of users){
-                          this.users.push(user);
-                        }});
+                      .subscribe( users => {   this.users = users;   });
   }
 
 
