@@ -9,9 +9,9 @@ Realizar a copia do aplicativo Tinder usando Ionic 2.
 ##Instalação
 
 ```
-https://github.com/xdavipereira/DesafioRedIonic-DaviPereira.git
+git clone https://github.com/xdavipereira/DesafioRedIonic-DaviPereira.git
 
-cd DesafioRedIonic-DaviPerereira
+cd DesafioRedIonic-DaviPereira
 
 npm install
 ```
