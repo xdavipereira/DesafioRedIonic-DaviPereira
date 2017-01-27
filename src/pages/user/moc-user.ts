@@ -4,7 +4,7 @@ export const User = {
     picture: {
       thumbnail: 'https://s28.postimg.org/z5dgxvccd/davi.jpg'
     },
-    description: 'A devoloper search for a new job.Lore Ipsun Bakon fritas arroz feijoão A devoloper search for a new job.Lore Ipsun Bakon fritas arroz feijoão ',
+    description: 'A devoloper search for a new job. ',
     age: 22
 
 

@@ -19,7 +19,9 @@ export class HomePage {
 
   cards: Array<any> = [];
   stackConfig: StackConfig;
-  public like;
+  colorFlag;
+  removedCard;
+
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, private userService: UserService) {
     //Configuração do component de cards.
@@ -38,9 +40,9 @@ export class HomePage {
 
 
 
-    openModal(userCard){
-      let modal = this.modalCtrl.create(UserModal,userCard);
-      this.userService.setCurrentCardUser(userCard);
+    openModal(){
+      let modal = this.modalCtrl.create(UserModal);
+      this.userService.setCurrentCardUser(this.cards[this.cards.length - 1] );
       modal.present();
     }
 
@@ -50,6 +52,12 @@ export class HomePage {
       modal.present();
     }
 
+    returnCard(){
+      if(this.cards.length !== 10){
+        this.cards.unshift(this.removedCard);
+      }
+    }
+
 
     addNewUsers() {
         this.userService.getUsers()
@@ -57,7 +65,7 @@ export class HomePage {
     }
 
     voteUp(like: boolean) {
-      let removedCard = this.cards.pop();
+      this.removedCard = this.cards.pop();
       this.cleanCard();
       if (this.cards.length < 2){
         this.addNewUsers();
@@ -74,12 +82,12 @@ export class HomePage {
   }
 
   onItemMove(element, x, y, r) {
-    x < 0 ?  this.like = true : this.like = false;
-    element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
+    x < 0 ?  this.colorFlag = true : this.colorFlag = false;
+    element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`
   }
 
   cleanCard() {
-    this.like = undefined;
+    this.colorFlag = undefined;
   }
 
 

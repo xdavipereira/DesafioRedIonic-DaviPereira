@@ -2,21 +2,22 @@
   <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(true)" (throwoutright)="voteUp(false)" id="card-stack">
     <ion-card #mycards1 swing-card *ngFor="let c of cards">
 
-      <div *ngIf="like === false" class="deslike">NOPE</div>
-      <div *ngIf="like === true" class="like">LIKE</div>
+      <div *ngIf="colorFlag === false" class="deslike">NOPE</div>
+      <div *ngIf="colorFlag === true" class="like">LIKE</div>
       <img class="card_image" *ngIf="c.picture" [src]="c.picture.large">
-      <ion-item  (click)="openModal(c)" class="info_card" *ngIf="c.picture">
+      <ion-item   class="info_card" *ngIf="c.picture">
         <h2>{{ c.name.first }} {{ c.name.last}}</h2>
         <p>{{ c.location.city }}</p>
       </ion-item>
     </ion-card>
   </div>
 
+
   <ion-row class="match-buttons">
 
     <ion-col>
-      <button ion-fab mini>
-        <ion-icon color="refresh" name="ios-refresh"></ion-icon>
+      <button ion-fab mini >
+        <ion-icon color="refresh"  name="ios-refresh"></ion-icon>
       </button>
     </ion-col>
 
@@ -27,7 +28,7 @@
     </ion-col>
 
     <ion-col>
-      <button ion-fab mini>
+      <button (click)="openModal()" ion-fab mini>
         <ion-icon color="flash" name="flash"></ion-icon>
       </button>
     </ion-col>
